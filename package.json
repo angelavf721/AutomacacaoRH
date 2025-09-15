@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "cypress": "^15.2.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/e2e/**/*.js"
+    ]
+  }
+}
