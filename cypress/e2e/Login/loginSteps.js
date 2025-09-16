@@ -1,8 +1,8 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
-import loginLogic from "./loginLogic";
+import loginLogic from "../../e2e/Login/loginLogic";
 
 Given("que estou na pagina de login", () => {
- loginPage.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    loginLogic.acessarSistema();
 });
 
 When("preencho o campo usuario", () => {

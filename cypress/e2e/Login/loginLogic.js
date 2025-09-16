@@ -1,42 +1,41 @@
 /// <reference types="cypress" />
-import loginPage from "../../support/pages/login/loginPage";
-
+import LoginPage from "../../support/pages/login/loginPage";
 class LoginLogic {
 
     acessarSistema() {  
-        loginPage.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        LoginPage.visit();
     }
 
     preencherCampoUsuario(usuario) {
-        loginPage.campoUsuario().type(usuario);
+        LoginPage.campoUsuario().type(usuario);
     }
 
     preencherCampoSenha(senha) {
-        loginPage.campoSenha().type(senha);
+        LoginPage.campoSenha().type(senha);
     }   
 
     clicarBotaoLogin() {
-        loginPage.botaoLogin().click();
+        LoginPage.botaoLogin().click();
     }
 
     validarAcessoSistema() {
-        loginPage.dashboard().should("be.visible").and("have.text", "Dashboard");
+        LoginPage.dashboard().should("be.visible").and("have.text", "Dashboard");
     }
 
     validarMensagemErro() {
-        loginPage.mensagemErro().should("be.visible").and("have.text", "Invalid credentials");
+        LoginPage.mensagemErro().should("be.visible").and("have.text", "Invalid credentials");
     }
 
     clicarLinkEsqueciSenha() {
-        loginPage.linkEsqueciSenha().click();
+        LoginPage.linkEsqueciSenha().click();
     }
 
     validarPaginaRecuperacaoSenha() {
-        loginPage.paginaRecuperacaoSenha().should("be.visible").and("have.text", "Reset Password");
+        LoginPage.paginaRecuperacaoSenha().should("be.visible").and("have.text", "Reset Password");
     }
 
     mensagemEnvioEmail() {
-        loginPage.mensagemEnvioEmail().should("be.visible").and("have.text", "Reset Password link sent successfully");
+        LoginPage.mensagemEnvioEmail().should("be.visible").and("have.text", "Reset Password link sent successfully");
     }
 
 }

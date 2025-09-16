@@ -1,7 +1,10 @@
 /// <reference types="cypress" />
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 class LoginPage {
+
+  visit() {
+    cy.visit('/auth/login');
+  }
 
   campoUsuario() {
     return cy.get('[name="username"]');

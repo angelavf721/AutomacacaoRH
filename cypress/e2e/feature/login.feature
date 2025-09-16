@@ -17,6 +17,6 @@ Feature: Login
 
   Scenario: Recupera senha
     When clico no link esqueci minha senha
-    And preencho o campo user 
+    And preencho o campo usuario 
     And clico no botao recuperar senha
     Then devo visualizar a mensagem de aviso de email enviado
