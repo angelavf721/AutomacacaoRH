@@ -7,13 +7,12 @@ Feature: Valida Dashboard
       When acesso o dashboard
       Then visualizo os cards do dashboard
 
-
     Scenario: Valida acesso a pagina Time at Work
         When acesso o dashboard
         And clico no card Time at Work
         Then sou redirecionado para a pagina Time at Work
 
-    Scenario: Valida acesso a pagina My Actions
+Scenario: Valida acesso a pagina My Actions
         When acesso o dashboard
         And clico no card My Actions
         Then sou redirecionado para a pagina My Actions
@@ -47,5 +46,3 @@ Feature: Valida Dashboard
         When acesso o dashboard
         And clico no card My Timesheets
         Then sou redirecionado para a pagina My Timesheets
-
- 
